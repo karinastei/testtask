@@ -3,17 +3,20 @@
 include_once './config/database.php';
 include_once('product.php');
 
-class ProductRepository {
+class ProductRepository
+{
     private $db;
 
-    public function __construct(Database $db) {
+    public function __construct(Database $db)
+    {
         $this->db = $db;
     }
 
-    public function fetchProductsFromDatabase() {
+    public function fetchProductsFromDatabase()
+    {
         $this->db->connect();
 
-        $sql = "SELECT SKU, name, price, amount FROM products";
+        $sql = "SELECT products.*, dvds.*, furniture.* FROM products LEFT JOIN dvds ON products.id = dvds.product_id LEFT JOIN furniture ON products.id = furniture.product_id; ";
         $result = $this->db->query($sql);
 
         $products = [];
@@ -28,13 +31,14 @@ class ProductRepository {
 
                 for ($i = 0; $i < $amount; $i++) {
                     $product = new Product($SKU, $name, $price, $amount);
+                    //kui paneks siia iga tüübi kohta lihtsalt?
                     $products[] = $product;
                 }
             }
         }
 
         $this->db->disconnect();
-        var_dump($products);
+
 //just for debug
         echo "<pre>";
         print_r($products);

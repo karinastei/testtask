@@ -4,13 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e56c93d6-7056-4925-ad7b-edaa9b316161" name="Changes" comment="Working index, big change inc">
+    <list default="true" id="e56c93d6-7056-4925-ad7b-edaa9b316161" name="Changes" comment="Shows product">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/database.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/database.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/controller/controller.php" beforeDir="false" afterPath="$PROJECT_DIR$/controller/controller.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/model/ProductRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/model/ProductRepository.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/model/product.php" beforeDir="false" afterPath="$PROJECT_DIR$/model/product.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -64,7 +60,7 @@
       <workItem from="1699551959969" duration="3287000" />
       <workItem from="1699874680650" duration="5357000" />
       <workItem from="1699944330929" duration="853000" />
-      <workItem from="1699970280531" duration="11843000" />
+      <workItem from="1699970280531" duration="13643000" />
     </task>
     <task id="LOCAL−00001" summary="Works with local game db">
       <created>1699552044967</created>
@@ -84,7 +80,13 @@
       <option name="presentableId" value="LOCAL−00003" />
       <updated>1699982645942</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL−00004" summary="Shows product">
+      <created>1699989216398</created>
+      <option name="number" value="LOCAL−00004" />
+      <option name="presentableId" value="LOCAL−00004" />
+      <updated>1699989216398</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -105,6 +107,7 @@
     <MESSAGE value="Works with local game db" />
     <MESSAGE value="Works with local store db" />
     <MESSAGE value="Working index, big change inc" />
-    <option name="LAST_COMMIT_MESSAGE" value="Working index, big change inc" />
+    <MESSAGE value="Shows product" />
+    <option name="LAST_COMMIT_MESSAGE" value="Shows product" />
   </component>
 </project>

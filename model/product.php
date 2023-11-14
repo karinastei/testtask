@@ -16,6 +16,7 @@ class Product
         $this->price = $price;
         $this->amount = $amount;
     }
+    //product types
 
 // Getters for SKU, name, and price
     public function getSKU()
