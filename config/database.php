@@ -1,35 +1,33 @@
-
 <?php
-$servername='localhost';
-$username='root';
-$password="qwerty";
-$dbname = "store";
-$conn=mysqli_connect($servername,$username,$password,"$dbname");
-if ($conn->connect_error) {
-    die("Connection failed: " . $conn->connect_error);}
-$product_id = 1; // Assuming you want the product with ID 2
-$query = "SELECT name FROM products WHERE id = $product_id";
 
-// Execute the query
-$result = mysqli_query($conn, $query);
+class Database {
+    private $host = 'localhost';
+    private $username = 'root';
+    private $password = 'qwerty';
+    private $database = 'store';
+    private $connection;
 
-// Check if the query was successful
-if ($result) {
-    $row = mysqli_fetch_assoc($result);
-    $name = $row['name'];
-} else {
-    $name = "Product not found"; // Handle the case where the query fails
+    public function connect() {
+        $this->connection = new mysqli($this->host, $this->username, $this->password, $this->database);
+
+        // Check connection
+        if ($this->connection->connect_error) {
+            die("Connection failed: " . $this->connection->connect_error);
+        }
+    }
+
+    public function disconnect() {
+        if ($this->connection) {
+            $this->connection->close();
+        }
+    }
+
+    public function query($sql) {
+        $result = $this->connection->query($sql);
+        return $result;
+    }
+
+    public function fetchAssoc($result) {
+        return $result->fetch_assoc();
+    }
 }
-
-// Close the database connection
-mysqli_close($conn);
-?>
-<html lang="en">
-<head>
-    <title>My store</title>
-</head>
-<body>
-<h1>Tereeee</h1>
-<h2><?php echo $name; ?></h2>
-</body>
-</html>
