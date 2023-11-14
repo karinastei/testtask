@@ -1,5 +1,6 @@
-<?php
 
+<?php
+// model\product.php
 class Product
 {
     private $SKU;
