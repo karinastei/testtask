@@ -9,16 +9,16 @@ abstract class Product
     private $amount;
     private $type;
 
-    private $productAttribute;
 
-    public function __construct($SKU, $name, $price, $amount, $type, $productAttribute)
+
+    public function __construct($SKU, $name, $price, $amount, $type)
     {
         $this->SKU = $SKU;
         $this->name = $name;
         $this->price = $price;
         $this->amount = $amount;
         $this->type = $type;
-        $this->productAttribute = $productAttribute;
+
     }
 
 // Getters for SKU, name, and price
@@ -47,31 +47,54 @@ abstract class Product
         return $this->type;
     }
 
-    public function getproductAttribute()
-    {
-        return $this-> productAttribute;
-    }
+    abstract public function getproductAttribute();
 
-    abstract protected function fetchSpecificAttribute($productAttribute);
+    abstract protected function fetchSpecificAttribute($row);
+
+    abstract public function getAttributeLabel();
 }
 
 class Book extends Product
 {
     private $weight;
 
-    public function fetchSpecificAttribute($productAttribute)
+    public function fetchSpecificAttribute($row)
     {
-        $this->weight = $productAttribute['weight'];
+        $this->weight = $row['weight'];
+    }
+    public function getproductAttribute()
+    {
+        return $this->weight;
+    }
+
+    public function getAttributeLabel()
+    {
+        return "Weight";
     }
 }
 
 class Furniture extends Product
 {
     private $height;
+    private $width;
+    private $length;
 
-    public function fetchSpecificAttribute($productAttribute)
+    public function fetchSpecificAttribute($row)
     {
-        $this->height = $productAttribute['height'];
+        $this->height = $row['height'];
+        $this->width = $row['width'];
+        $this->length = $row['length'];
+    }
+
+    public function getproductAttribute()
+    {
+        return $this->height . "x" . $this->width . "x" . $this->length;
+    }
+
+    public function getAttributeLabel()
+    {
+        //or Dimension? like on the image
+        return "Dimensions";
     }
 }
 
@@ -79,20 +102,29 @@ class DVD extends Product
 {
     private $size;
 
-    public function fetchSpecificAttribute($productAttribute)
+    public function fetchSpecificAttribute($row)
     {
-        $this->size = $productAttribute['size'];
+        $this->size = $row['size'];
+    }
+    public function getproductAttribute()
+    {
+        return $this->size;
+    }
+
+    public function getAttributeLabel()
+    {
+        return "Size";
     }
 }
 
 class ProductFactory
 {
-    public static function createProduct($type, $SKU, $name, $price, $amount, $productAttribute)
+    public static function createProduct($type, $SKU, $name, $price, $amount)
     {
         $className = ucfirst(strtolower($type));
 
         if (class_exists($className) && is_subclass_of($className, 'Product')) {
-            return new $className($SKU, $name, $price, $amount, $type, $productAttribute);
+            return new $className($SKU, $name, $price, $amount, $type);
         } else {
             throw new Exception("Invalid product type");
         }
@@ -118,16 +150,18 @@ try {
         $product = ProductFactory::createProduct($productType, $productSKU, $productName, $productPrice, $productAmount);
 
         $product->fetchSpecificAttribute($row); // Fetches the specific property based on the product type
-        //uses the amount to show every product with that id
+        //uses the amount to show every product
         for ($i = 0; $i < $product->getAmount(); $i++) {
 
             // Use the $product object as needed
             echo "SKU: " . $product->getSKU() . "<br>";
             echo "Name: " . $product->getName() . "<br>";
             echo "Price: $" . $product->getPrice() . "<br>";
-            echo "Type: $" . $product->getType() . "<br>";
-            echo "Amount: $" . $product->getAmount() . "<br>";
-            echo "Amount: $" . $product->getAmount() . "<br>";
+            echo "Type: " . $product->getType() . "<br>";
+            echo "Amount: " . $product->getAmount() . "<br>";
+
+            echo $product->getAttributeLabel() . ": " . $product->getproductAttribute() . "<br>";
+            echo "<br>";
 
             $products[] = $product;
 
