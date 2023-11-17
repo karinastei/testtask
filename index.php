@@ -9,13 +9,16 @@ abstract class Product
     private $amount;
     private $type;
 
-    public function __construct($SKU, $name, $price, $amount, $type)
+    private $productAttribute;
+
+    public function __construct($SKU, $name, $price, $amount, $type, $productAttribute)
     {
         $this->SKU = $SKU;
         $this->name = $name;
         $this->price = $price;
         $this->amount = $amount;
         $this->type = $type;
+        $this->productAttribute = $productAttribute;
     }
 
 // Getters for SKU, name, and price
@@ -43,31 +46,53 @@ abstract class Product
     {
         return $this->type;
     }
+
+    public function getproductAttribute()
+    {
+        return $this-> productAttribute;
+    }
+
+    abstract protected function fetchSpecificAttribute($productAttribute);
 }
 
 class Book extends Product
 {
     private $weight;
+
+    public function fetchSpecificAttribute($productAttribute)
+    {
+        $this->weight = $productAttribute['weight'];
+    }
 }
 
 class Furniture extends Product
 {
     private $height;
+
+    public function fetchSpecificAttribute($productAttribute)
+    {
+        $this->height = $productAttribute['height'];
+    }
 }
 
 class DVD extends Product
 {
     private $size;
+
+    public function fetchSpecificAttribute($productAttribute)
+    {
+        $this->size = $productAttribute['size'];
+    }
 }
 
 class ProductFactory
 {
-    public static function createProduct($type, $SKU, $name, $price, $amount)
+    public static function createProduct($type, $SKU, $name, $price, $amount, $productAttribute)
     {
         $className = ucfirst(strtolower($type));
 
         if (class_exists($className) && is_subclass_of($className, 'Product')) {
-            return new $className($SKU, $name, $price, $amount, $type);
+            return new $className($SKU, $name, $price, $amount, $type, $productAttribute);
         } else {
             throw new Exception("Invalid product type");
         }
@@ -91,6 +116,8 @@ try {
         $productAmount = $row['amount'];
         // Create product object using the factory
         $product = ProductFactory::createProduct($productType, $productSKU, $productName, $productPrice, $productAmount);
+
+        $product->fetchSpecificAttribute($row); // Fetches the specific property based on the product type
         //uses the amount to show every product with that id
         for ($i = 0; $i < $product->getAmount(); $i++) {
 
