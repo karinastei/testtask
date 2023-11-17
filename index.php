@@ -4,21 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <style>.product-grid {
-            display: grid;
-            padding: 10%;
-            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); /* Adjust as needed */
-            gap: 10%; /* Adjust the gap between products */
-        }
-
-        .product-box {
-            border: 1px solid #ccc;
-            padding: 5%;
-            /* Additional styling */
-            /* You can add more styles to customize the appearance of each product box */
-        }
-    </style>
-
+    <link rel="stylesheet" type="text/css" href="./style.css">
 </head>
 <?php
 include_once './config/database.php';
@@ -66,10 +52,9 @@ LEFT JOIN books ON products.id = books.product_id;");
         //uses the amount to add every instance of a product
         for ($i = 0; $i < $product->getValue('amount'); $i++) {
             $products[] = $product;
-
         }
-
     }
+
     echo "<form method='post' action='delete.php'>";
 
     echo "<div class='product-grid'>";
@@ -85,12 +70,8 @@ LEFT JOIN books ON products.id = books.product_id;");
         echo "</div>";
     }
     echo "</div>";
-    // echo "<pre>";
-    // print_r($products);
-    // echo "</pre>";
-
+    // echo "<pre>"; print_r($products); echo "</pre>";
 } catch (Exception $e) {
     echo $e->getMessage();
-
 }
 $database->disconnect(); // Disconnect from the database
