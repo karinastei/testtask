@@ -1,7 +1,7 @@
 <?php
 // ProductRepository.php
 include_once './config/database.php';
-include_once('product.php');
+include_once('Product.php');
 
 class ProductRepository
 {

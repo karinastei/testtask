@@ -22,102 +22,10 @@
 </head>
 <?php
 include_once './config/database.php';
-
-abstract class Product
-{
-    private $SKU;
-    private $name;
-    private $price;
-    private $amount;
-    private $type;
-
-    public function __construct($SKU, $name, $price, $amount, $type)
-    {
-        $this->SKU = $SKU;
-        $this->name = $name;
-        $this->price = $price;
-        $this->amount = $amount;
-        $this->type = $type;
-
-    }
-
-// Getters for SKU, name, and price
-    public function getValue($value)
-    {
-        return $this->{$value};
-    }
-
-    abstract public function getproductAttribute();
-
-    abstract protected function fetchSpecificAttribute($row);
-
-    abstract public function getAttributeLabel();
-}
-
-class Book extends Product
-{
-    private $weight;
-
-    public function fetchSpecificAttribute($row)
-    {
-        $this->weight = $row['weight'];
-    }
-
-    public function getproductAttribute()
-    {
-        return $this->weight;
-    }
-
-    public function getAttributeLabel()
-    {
-        return "Weight";
-    }
-}
-
-class Furniture extends Product
-{
-    private $height;
-    private $width;
-    private $length;
-
-    public function fetchSpecificAttribute($row)
-    {
-        $this->height = $row['height'];
-        $this->width = $row['width'];
-        $this->length = $row['length'];
-    }
-
-    public function getproductAttribute()
-    {
-        return $this->height . "x" . $this->width . "x" . $this->length;
-    }
-
-    public function getAttributeLabel()
-    {
-        //or Dimension? like on the image
-        return "Dimensions";
-    }
-}
-
-class DVD extends Product
-{
-    private $size;
-
-    public function fetchSpecificAttribute($row)
-    {
-        $this->size = $row['size'];
-    }
-
-    public function getproductAttribute()
-    {
-        return $this->size;
-    }
-
-    public function getAttributeLabel()
-    {
-        return "Size";
-    }
-}
+include_once './model/Product.php';
+include_once './model/Book.php';
+include_once './model/DVD.php';
+include_once './model/Furniture.php';
 
 class ProductFactory
 {
@@ -145,7 +53,6 @@ LEFT JOIN furniture ON products.id = furniture.product_id
 LEFT JOIN books ON products.id = books.product_id;");
 
     while ($row = $productData->fetch_assoc()) {
-
         $productType = $row['type'];
         $productSKU = $row['SKU'];
         $productName = $row['name'];
@@ -158,13 +65,13 @@ LEFT JOIN books ON products.id = books.product_id;");
 
         //uses the amount to add every instance of a product
         for ($i = 0; $i < $product->getValue('amount'); $i++) {
-
             $products[] = $product;
 
         }
 
     }
     echo "<form method='post' action='delete.php'>";
+
     echo "<div class='product-grid'>";
     foreach ($products as $product) {
         echo "<div class='product-box'>";
