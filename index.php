@@ -9,8 +9,6 @@ abstract class Product
     private $amount;
     private $type;
 
-
-
     public function __construct($SKU, $name, $price, $amount, $type)
     {
         $this->SKU = $SKU;
@@ -62,6 +60,7 @@ class Book extends Product
     {
         $this->weight = $row['weight'];
     }
+
     public function getproductAttribute()
     {
         return $this->weight;
@@ -106,6 +105,7 @@ class DVD extends Product
     {
         $this->size = $row['size'];
     }
+
     public function getproductAttribute()
     {
         return $this->size;
@@ -136,7 +136,22 @@ $database = new Database();
 $database->connect(); // Connect to the database
 
 try {
-    $productData = $database->query("SELECT products.*, dvds.*, furniture.* FROM products LEFT JOIN dvds ON products.id = dvds.product_id LEFT JOIN furniture ON products.id = furniture.product_id; ");
+    $productData = $database->query("SELECT 
+    products.*, 
+    dvds.size, 
+    furniture.height, 
+    furniture.width, 
+    furniture.length,
+    books.weight
+FROM 
+    products 
+LEFT JOIN 
+    dvds ON products.id = dvds.product_id 
+LEFT JOIN 
+    furniture ON products.id = furniture.product_id
+LEFT JOIN
+    books ON products.id = books.product_id; 
+");
 
 
     while ($row = $productData->fetch_assoc()) {
@@ -164,6 +179,8 @@ try {
             echo "<br>";
 
             $products[] = $product;
+
+
 
         }
 

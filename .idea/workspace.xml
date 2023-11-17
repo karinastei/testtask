@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e56c93d6-7056-4925-ad7b-edaa9b316161" name="Changes" comment="few steps back put the value in the objects but didn't show it">
+    <list default="true" id="e56c93d6-7056-4925-ad7b-edaa9b316161" name="Changes" comment="Shows all the product data with corrwct labels">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
     </list>
@@ -64,7 +64,7 @@
       <workItem from="1699874680650" duration="5357000" />
       <workItem from="1699944330929" duration="853000" />
       <workItem from="1699970280531" duration="13643000" />
-      <workItem from="1700208445137" duration="10462000" />
+      <workItem from="1700208445137" duration="12747000" />
     </task>
     <task id="LOCAL−00001" summary="Works with local game db">
       <created>1699552044967</created>
@@ -96,7 +96,13 @@
       <option name="presentableId" value="LOCAL−00005" />
       <updated>1700245408532</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL−00006" summary="Shows all the product data with corrwct labels">
+      <created>1700250194383</created>
+      <option name="number" value="LOCAL−00006" />
+      <option name="presentableId" value="LOCAL−00006" />
+      <updated>1700250194383</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -119,6 +125,7 @@
     <MESSAGE value="Working index, big change inc" />
     <MESSAGE value="Shows product" />
     <MESSAGE value="few steps back put the value in the objects but didn't show it" />
-    <option name="LAST_COMMIT_MESSAGE" value="few steps back put the value in the objects but didn't show it" />
+    <MESSAGE value="Shows all the product data with corrwct labels" />
+    <option name="LAST_COMMIT_MESSAGE" value="Shows all the product data with corrwct labels" />
   </component>
 </project>
