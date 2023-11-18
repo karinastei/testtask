@@ -19,11 +19,7 @@ class ProductController
             $database->connect(); // Connect to the database
 
             // Fetch products from the database
-            $productData = $database->query("SELECT products.*, dvds.size, furniture.height, furniture.width, furniture.length, books.weight
-                FROM products 
-                LEFT JOIN dvds ON products.id = dvds.product_id 
-                LEFT JOIN furniture ON products.id = furniture.product_id
-                LEFT JOIN books ON products.id = books.product_id;");
+            $productData = $database->query("SELECT products.*, dvds.size, furniture.height, furniture.width, furniture.length, books.weight FROM products LEFT JOIN dvds ON products.id = dvds.product_id LEFT JOIN furniture ON products.id = furniture.product_id LEFT JOIN books ON products.id = books.product_id;");
 
             while ($row = $productData->fetch_assoc()) {
                 $productType = $row['type'];
@@ -57,11 +53,8 @@ class ProductController
             $database->connect();
 
             foreach ($selectedSKUs as $selectedSKU) {
-                // Calculate the number of times the product was selected for deletion
-                $deleteCount = array_count_values($selectedSKUs)[$selectedSKU];
-
                 // Update the product's amount in the database
-                $query = "UPDATE products SET amount = amount - $deleteCount WHERE SKU = '$selectedSKU'";
+                $query = "UPDATE products SET amount = amount - 1 WHERE SKU = '$selectedSKU'";
                 $database->query($query);
             }
 
