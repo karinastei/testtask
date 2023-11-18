@@ -11,7 +11,7 @@ class DVD extends Product
 
     public function getproductAttribute()
     {
-        return $this->size;
+        return $this->size  . "MB";
     }
 
     public function getAttributeLabel()

@@ -4,9 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e56c93d6-7056-4925-ad7b-edaa9b316161" name="Changes" comment="mass delete (works?)">
+    <list default="true" id="e56c93d6-7056-4925-ad7b-edaa9b316161" name="Changes" comment="mass delete works">
+      <change afterPath="$PROJECT_DIR$/add_product.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/controller/ProductController.php" beforeDir="false" afterPath="$PROJECT_DIR$/controller/ProductController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/model/Book.php" beforeDir="false" afterPath="$PROJECT_DIR$/model/Book.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/model/DVD.php" beforeDir="false" afterPath="$PROJECT_DIR$/model/DVD.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/style.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

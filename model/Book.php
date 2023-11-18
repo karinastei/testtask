@@ -12,7 +12,7 @@ class Book extends Product
 
     public function getproductAttribute()
     {
-        return $this->weight;
+        return $this->weight  . "KG";
     }
 
     public function getAttributeLabel()
