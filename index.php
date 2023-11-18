@@ -9,12 +9,12 @@
 </head>
 <body>
 <h1>Product List</h1>
-<form method='post' action='delete.php'>
+<form method='post' action=''>
     <input type='submit' id='delete-product-btn' name='delete' value='Mass delete'>
     <div class='product-grid'>
         <?php
         // Import the ProductController
-        require_once './controller/controller.php';
+        require_once './controller/ProductController.php';
 
         // Create an instance of the ProductController
         $controller = new ProductController();

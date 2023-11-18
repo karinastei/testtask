@@ -7,8 +7,10 @@ require_once './model/Furniture.php';
 require_once './model/ProductFactory.php';
 require_once './config/database.php';
 
-class ProductController {
-    public function displayProducts() {
+class ProductController
+{
+    public function displayProducts()
+    {
         $products = [];
 
         try {
@@ -50,5 +52,4 @@ class ProductController {
         }
     }
 
-    // Other methods for handling actions like deleting products could be added here
 }
