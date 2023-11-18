@@ -9,7 +9,7 @@
 </head>
 <body>
 <h1>Product List</h1>
-<form method='post' action=''>
+<form method='post' action='<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>'>
     <input type='submit' id='delete-product-btn' name='delete' value='Mass delete'>
     <div class='product-grid'>
         <?php
@@ -18,6 +18,13 @@
 
         // Create an instance of the ProductController
         $controller = new ProductController();
+
+        // Add form submission handling here
+        if (isset($_POST['delete'])) {
+            $selectedSKUs = isset($_POST['selected_products']) ? $_POST['selected_products'] : [];
+            $controller->updateProductAmounts($selectedSKUs);
+            // Optionally, you can redirect or perform other actions after updating the amounts.
+        }
 
         // Call the displayProducts method to retrieve products
         $products = $controller->displayProducts();

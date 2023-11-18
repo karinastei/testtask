@@ -51,5 +51,27 @@ class ProductController
             echo $e->getMessage();
         }
     }
+    public function updateProductAmounts($selectedSKUs) {
+        try {
+            $database = new Database();
+            $database->connect();
+
+            foreach ($selectedSKUs as $selectedSKU) {
+                // Calculate the number of times the product was selected for deletion
+                $deleteCount = array_count_values($selectedSKUs)[$selectedSKU];
+
+                // Update the product's amount in the database
+                $query = "UPDATE products SET amount = amount - $deleteCount WHERE SKU = '$selectedSKU'";
+                $database->query($query);
+            }
+
+            $database->disconnect();
+            header("Location: ".$_SERVER['PHP_SELF']);
+            exit();
+        } catch (Exception $e) {
+            echo $e->getMessage();
+        }
+
+    }
 
 }
