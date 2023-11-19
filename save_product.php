@@ -22,12 +22,23 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $productType = $database->connection->real_escape_string($productType);
         $weight = $database->connection->real_escape_string($weight);
 
-        // Construct and execute the SQL query
-        $query = "INSERT INTO products (SKU, name, price, amount, type) 
-                  VALUES ('$sku', '$name', '$price', '$amount', '$productType')";
+        // Construct and execute the SQL query for products table
+        $queryProducts = "INSERT INTO products (SKU, name, price, amount, type) 
+                          VALUES ('$sku', '$name', '$price', '$amount', '$productType')";
 
-        if ($database->query($query)) {
-            echo "Product added successfully!";
+        if ($database->query($queryProducts)) {
+            // Get the ID of the inserted product
+            $productId = $database->connection->insert_id;
+
+            // Construct and execute the SQL query for books table
+            $queryBooks = "INSERT INTO books (product_id, weight) 
+                           VALUES ('$productId', '$weight')";
+
+            if ($database->query($queryBooks)) {
+                echo "Product added successfully!";
+            } else {
+                echo "Error adding product to books table: " . $database->connection->error;
+            }
         } else {
             echo "Error adding product: " . $database->connection->error;
         }
@@ -39,4 +50,5 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 } else {
     echo "Invalid request!";
 }
+
 ?>

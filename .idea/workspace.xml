@@ -4,11 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e56c93d6-7056-4925-ad7b-edaa9b316161" name="Changes" comment="very basic add product page">
-      <change afterPath="$PROJECT_DIR$/save_product.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/add_product.php" beforeDir="false" afterPath="$PROJECT_DIR$/add_product.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/database.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/database.php" afterDir="false" />
+    <list default="true" id="e56c93d6-7056-4925-ad7b-edaa9b316161" name="Changes" comment="inserts book into products table only">
+      <change beforePath="$PROJECT_DIR$/save_product.php" beforeDir="false" afterPath="$PROJECT_DIR$/save_product.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -76,7 +73,7 @@
       <workItem from="1699970280531" duration="13643000" />
       <workItem from="1700208445137" duration="18898000" />
       <workItem from="1700304605055" duration="13978000" />
-      <workItem from="1700421217492" duration="5412000" />
+      <workItem from="1700421217492" duration="5867000" />
     </task>
     <task id="LOCAL−00001" summary="Works with local game db">
       <created>1699552044967</created>
@@ -162,7 +159,13 @@
       <option name="presentableId" value="LOCAL−00014" />
       <updated>1700342788139</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL−00015" summary="inserts book into products table only">
+      <created>1700427650416</created>
+      <option name="number" value="LOCAL−00015" />
+      <option name="presentableId" value="LOCAL−00015" />
+      <updated>1700427650416</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -194,6 +197,7 @@
     <MESSAGE value="works" />
     <MESSAGE value="mass delete (works?)" />
     <MESSAGE value="very basic add product page" />
-    <option name="LAST_COMMIT_MESSAGE" value="very basic add product page" />
+    <MESSAGE value="inserts book into products table only" />
+    <option name="LAST_COMMIT_MESSAGE" value="inserts book into products table only" />
   </component>
 </project>
