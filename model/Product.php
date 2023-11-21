@@ -8,6 +8,7 @@ abstract class Product
     private $amount;
     private $type;
     protected $specificAttributes = [];
+    protected $specificUnit;
 
     public function __construct($SKU = '', $name = '', $price = 0, $amount = 0, $type = '')
     {
@@ -24,9 +25,13 @@ abstract class Product
         return $this->{$value};
     }
 
-    abstract public function getproductAttribute();
+    public function getSpecificAttribute()
+    {
+        $specificAttribute = $this->specificAttributes[0];
+        return $this->{$specificAttribute} . " " . $this->specificUnit;
+    }
 
-    public function fetchSpecificAttribute($row)
+    public function getSpecificAttributeFromDB($row)
     {
         foreach ($this->specificAttributes as $attribute) {
             if (isset($row[$attribute])) {
@@ -35,7 +40,18 @@ abstract class Product
         }
     }
 
-    abstract public function getAttributeLabel();
+    public function getAttributeLabel()
+    {
+        return ucfirst($this->specificAttributes[0]);
+    }
 
-    abstract public function getFormValues();
+    public function getFormValues()
+    {
+        $form = '';
+        foreach ($this->specificAttributes as $attribute) {
+            $form .= '<label for="' . $attribute . '">' . ucfirst($attribute) . ' (' . $this->specificUnit . ')</label>';
+            $form .= '<input type="text" id="' . $attribute . '" name="' . $attribute . '" required><br><br>';
+        }
+        return $form;
+    }
 }

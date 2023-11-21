@@ -51,7 +51,7 @@
             echo $product->getValue('price') . " $" . "</p>";
             echo "<p>Type: " . $product->getValue('type') . "</p>";
             echo "<p>Amount: " . $product->getValue('amount') . "</p>";
-            echo "<p>" . $product->getAttributeLabel() . ": " . $product->getproductAttribute() . "</p>";
+            echo "<p>" . $product->getAttributeLabel() . ": " . $product->getSpecificAttribute() . "</p>";
             echo "</div>";
             echo "</div>";
         }

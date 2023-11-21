@@ -4,8 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e56c93d6-7056-4925-ad7b-edaa9b316161" name="Changes" comment="dynamic form change based on type">
+    <list default="true" id="e56c93d6-7056-4925-ad7b-edaa9b316161" name="Changes" comment="removed method duplication">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/controller/ProductController.php" beforeDir="false" afterPath="$PROJECT_DIR$/controller/ProductController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/model/Book.php" beforeDir="false" afterPath="$PROJECT_DIR$/model/Book.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/model/DVD.php" beforeDir="false" afterPath="$PROJECT_DIR$/model/DVD.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/model/Furniture.php" beforeDir="false" afterPath="$PROJECT_DIR$/model/Furniture.php" afterDir="false" />
@@ -79,7 +81,7 @@
       <workItem from="1700208445137" duration="18898000" />
       <workItem from="1700304605055" duration="13978000" />
       <workItem from="1700421217492" duration="6185000" />
-      <workItem from="1700480143785" duration="24049000" />
+      <workItem from="1700480143785" duration="29384000" />
     </task>
     <task id="LOCAL−00001" summary="Works with local game db">
       <created>1699552044967</created>
@@ -183,7 +185,13 @@
       <option name="presentableId" value="LOCAL−00017" />
       <updated>1700586969990</updated>
     </task>
-    <option name="localTasksCounter" value="18" />
+    <task id="LOCAL−00018" summary="removed method duplication">
+      <created>1700595913652</created>
+      <option name="number" value="LOCAL−00018" />
+      <option name="presentableId" value="LOCAL−00018" />
+      <updated>1700595913652</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -218,6 +226,7 @@
     <MESSAGE value="inserts book into products table only" />
     <MESSAGE value="inserts book into products and books table successfully" />
     <MESSAGE value="dynamic form change based on type" />
-    <option name="LAST_COMMIT_MESSAGE" value="dynamic form change based on type" />
+    <MESSAGE value="removed method duplication" />
+    <option name="LAST_COMMIT_MESSAGE" value="removed method duplication" />
   </component>
 </project>

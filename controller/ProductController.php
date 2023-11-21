@@ -31,7 +31,7 @@ class ProductController
                 // Create product object using the factory
                 $product = ProductFactory::createProduct($productType, $productSKU, $productName, $productPrice, $productAmount);
 
-                $product->fetchSpecificAttribute($row); // Fetches the specific property based on the product type
+                $product->getSpecificAttributeFromDB($row); // Fetches the specific property based on the product type
 
                 // Add the product to the products array
                 for ($i = 0; $i < $product->getValue('amount'); $i++) {
