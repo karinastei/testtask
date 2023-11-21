@@ -7,6 +7,7 @@ abstract class Product
     private $price;
     private $amount;
     private $type;
+    protected $specificAttributes = [];
 
     public function __construct($SKU = '', $name = '', $price = 0, $amount = 0, $type = '')
     {
@@ -15,7 +16,6 @@ abstract class Product
         $this->price = $price;
         $this->amount = $amount;
         $this->type = $type;
-
     }
 
 // Getters for SKU, name, and price
@@ -26,7 +26,14 @@ abstract class Product
 
     abstract public function getproductAttribute();
 
-    abstract protected function fetchSpecificAttribute($row);
+    public function fetchSpecificAttribute($row)
+    {
+        foreach ($this->specificAttributes as $attribute) {
+            if (isset($row[$attribute])) {
+                $this->{$attribute} = $row[$attribute];
+            }
+        }
+    }
 
     abstract public function getAttributeLabel();
 

@@ -4,16 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e56c93d6-7056-4925-ad7b-edaa9b316161" name="Changes" comment="inserts book into products and books table successfully">
-      <change afterPath="$PROJECT_DIR$/form_change.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/product_form.js" afterDir="false" />
+    <list default="true" id="e56c93d6-7056-4925-ad7b-edaa9b316161" name="Changes" comment="dynamic form change based on type">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/add_product.php" beforeDir="false" afterPath="$PROJECT_DIR$/add_product.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/model/Book.php" beforeDir="false" afterPath="$PROJECT_DIR$/model/Book.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/model/DVD.php" beforeDir="false" afterPath="$PROJECT_DIR$/model/DVD.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/model/Furniture.php" beforeDir="false" afterPath="$PROJECT_DIR$/model/Furniture.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/model/Product.php" beforeDir="false" afterPath="$PROJECT_DIR$/model/Product.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/save_product.php" beforeDir="false" afterPath="$PROJECT_DIR$/save_product.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -83,7 +79,7 @@
       <workItem from="1700208445137" duration="18898000" />
       <workItem from="1700304605055" duration="13978000" />
       <workItem from="1700421217492" duration="6185000" />
-      <workItem from="1700480143785" duration="18725000" />
+      <workItem from="1700480143785" duration="24049000" />
     </task>
     <task id="LOCAL−00001" summary="Works with local game db">
       <created>1699552044967</created>
@@ -181,7 +177,13 @@
       <option name="presentableId" value="LOCAL−00016" />
       <updated>1700427954544</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL−00017" summary="dynamic form change based on type">
+      <created>1700586969990</created>
+      <option name="number" value="LOCAL−00017" />
+      <option name="presentableId" value="LOCAL−00017" />
+      <updated>1700586969990</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -215,6 +217,7 @@
     <MESSAGE value="very basic add product page" />
     <MESSAGE value="inserts book into products table only" />
     <MESSAGE value="inserts book into products and books table successfully" />
-    <option name="LAST_COMMIT_MESSAGE" value="inserts book into products and books table successfully" />
+    <MESSAGE value="dynamic form change based on type" />
+    <option name="LAST_COMMIT_MESSAGE" value="dynamic form change based on type" />
   </component>
 </project>

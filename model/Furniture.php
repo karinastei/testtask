@@ -2,16 +2,9 @@
 
 class Furniture extends Product
 {
-    private $height;
-    private $width;
-    private $length;
+    protected $specificAttributes = ['height', 'width', 'length']; // Specific attributes for Furniture
+    private $specificUnit = 'CM';
 
-    public function fetchSpecificAttribute($row)
-    {
-        $this->height = $row['height'];
-        $this->width = $row['width'];
-        $this->length = $row['length'];
-    }
 
     public function getproductAttribute()
     {

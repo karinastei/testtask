@@ -2,14 +2,8 @@
 
 class Book extends Product
 {
-    private $weight;
-    //selle asemel "specificAttribute, millel Book objectis weight väärtus"
-    //unit of measurement (replaces kg)
-
-    public function fetchSpecificAttribute($row)
-    {
-        $this->weight = $row['weight'];
-    }
+    protected $specificAttributes = ['weight']; // Specific attribute for Books
+    private $specificUnit = 'KG';
 
     public function getproductAttribute()
     {

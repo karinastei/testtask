@@ -2,12 +2,8 @@
 
 class Dvd extends Product
 {
-    private $size;
-
-    public function fetchSpecificAttribute($row)
-    {
-        $this->size = $row['size'];
-    }
+    protected $specificAttributes = ['size'];
+    private $specificUnit = 'MB';
 
     public function getproductAttribute()
     {
