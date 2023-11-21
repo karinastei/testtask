@@ -4,6 +4,8 @@
 <head>
     <link rel="stylesheet" type="text/css" href="./style.css">
     <title>Add Product</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+</head>
 </head>
 <body>
 <div class="container">
@@ -38,9 +40,9 @@
             </select><br><br>
 
             <!-- this could be as text in function in product and the keyword is in brackets -->
-            <!--  -->
-            <label for="weight">Weight:</label>
-            <input type="text" id="weight" name="weight" required><br><br>
+            <!--siia tuleb mingi asi et siia panna input -->
+            <div id="dynamicFields"></div>
+
 
     </form>
 

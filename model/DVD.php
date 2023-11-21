@@ -1,6 +1,6 @@
 <?php
 
-class DVD extends Product
+class Dvd extends Product
 {
     private $size;
 
@@ -17,5 +17,9 @@ class DVD extends Product
     public function getAttributeLabel()
     {
         return "Size";
+    }
+    public function getFormValues() {
+        return '<label for="size">Size (MB)</label>
+            <input type="text" id="size" name="size" required><br><br>';
     }
 }

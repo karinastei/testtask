@@ -1,7 +1,9 @@
 <?php
 require_once './config/database.php'; // Include the Database class
+require_once './model/Product.php';
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+
     try {
         $database = new Database(); // Create an instance of the Database class
         $database->connect(); // Connect to the database
@@ -30,7 +32,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             // Get the ID of the inserted product
             $productId = $database->connection->insert_id;
 
-            // Construct and execute the SQL query for books table
+            // Construct and execute the SQL query for books table OR OTHER
             $queryBooks = "INSERT INTO books (product_id, weight) 
                            VALUES ('$productId', '$weight')";
 

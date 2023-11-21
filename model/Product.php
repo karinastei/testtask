@@ -8,7 +8,7 @@ abstract class Product
     private $amount;
     private $type;
 
-    public function __construct($SKU, $name, $price, $amount, $type)
+    public function __construct($SKU = '', $name = '', $price = 0, $amount = 0, $type = '')
     {
         $this->SKU = $SKU;
         $this->name = $name;
@@ -29,4 +29,6 @@ abstract class Product
     abstract protected function fetchSpecificAttribute($row);
 
     abstract public function getAttributeLabel();
+
+    abstract public function getFormValues();
 }

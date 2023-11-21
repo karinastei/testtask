@@ -23,4 +23,12 @@ class Furniture extends Product
         //or Dimension? like on the image
         return "Dimensions";
     }
+    public function getFormValues() {
+        return '<label for="height">Height (CM)</label>
+            <input type="text" id="size" name="size" required><br><br>
+            <label for="width">width (CM)</label>
+            <input type="text" id="width" name="width" required><br><br>
+            <label for="length">length (CM)</label>
+            <input type="text" id="length" name="length" required><br><br>';
+    }
 }
