@@ -19,8 +19,8 @@
             </div>
         </div>
         <div class="form-body">
-            <label for="sku">SKU:</label>
-            <input type="text" id="sku" name="sku" required><br><br>
+            <label for="SKU">SKU:</label>
+            <input type="text" id="SKU" name="SKU" required><br><br>
 
             <label for="name">Name:</label>
             <input type="text" id="name" name="name" required><br><br>

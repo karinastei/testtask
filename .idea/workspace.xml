@@ -4,9 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e56c93d6-7056-4925-ad7b-edaa9b316161" name="Changes" comment="removed some more method duplication">
+    <list default="true" id="e56c93d6-7056-4925-ad7b-edaa9b316161" name="Changes" comment="22.11 morning">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/model/Furniture.php" beforeDir="false" afterPath="$PROJECT_DIR$/model/Furniture.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/add_product.php" beforeDir="false" afterPath="$PROJECT_DIR$/add_product.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/controller/ProductController.php" beforeDir="false" afterPath="$PROJECT_DIR$/controller/ProductController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/save_product.php" beforeDir="false" afterPath="$PROJECT_DIR$/save_product.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -78,7 +79,7 @@
       <workItem from="1700304605055" duration="13978000" />
       <workItem from="1700421217492" duration="6185000" />
       <workItem from="1700480143785" duration="30683000" />
-      <workItem from="1700640969542" duration="602000" />
+      <workItem from="1700640969542" duration="4793000" />
     </task>
     <task id="LOCAL−00001" summary="Works with local game db">
       <created>1699552044967</created>
@@ -194,7 +195,13 @@
       <option name="presentableId" value="LOCAL−00019" />
       <updated>1700601511589</updated>
     </task>
-    <option name="localTasksCounter" value="20" />
+    <task id="LOCAL−00020" summary="22.11 morning">
+      <created>1700641929917</created>
+      <option name="number" value="LOCAL−00020" />
+      <option name="presentableId" value="LOCAL−00020" />
+      <updated>1700641929917</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -231,6 +238,7 @@
     <MESSAGE value="dynamic form change based on type" />
     <MESSAGE value="removed method duplication" />
     <MESSAGE value="removed some more method duplication" />
-    <option name="LAST_COMMIT_MESSAGE" value="removed some more method duplication" />
+    <MESSAGE value="22.11 morning" />
+    <option name="LAST_COMMIT_MESSAGE" value="22.11 morning" />
   </component>
 </project>
