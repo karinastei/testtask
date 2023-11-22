@@ -2,6 +2,6 @@
 
 class Book extends Product
 {
-    protected $specificAttributes = ['weight']; // Specific attribute for Books
+    protected $specificAttributes = ['weight'];
     protected $specificUnit = 'KG';
 }

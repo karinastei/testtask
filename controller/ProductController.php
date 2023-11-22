@@ -22,14 +22,16 @@ class ProductController
             $productData = $database->query("SELECT products.*, dvd.size, furniture.height, furniture.width, furniture.length, book.weight FROM products LEFT JOIN dvd ON products.id = dvd.product_id LEFT JOIN furniture ON products.id = furniture.product_id LEFT JOIN book ON products.id = book.product_id;");
 
             while ($row = $productData->fetch_assoc()) {
-                $productType = $row['type'];
-                $productSKU = $row['SKU'];
-                $productName = $row['name'];
-                $productPrice = $row['price'];
-                $productAmount = $row['amount'];
+                $type = $row['type'];
+                $sku = $row['sku'];
+                $name = $row['name'];
+                $price = $row['price'];
+                $amount = $row['amount'];
 
                 // Create product object using the factory
-                $product = ProductFactory::createProduct($productType, $productSKU, $productName, $productPrice, $productAmount);
+                //use these two to create an object with the attributes
+                //then but the object to database !!!!!!
+                $product = ProductFactory::createProduct($type, $sku, $name, $price, $amount);
 
                 $product->getSpecificAttributeFromDB($row); // Fetches the specific property based on the product type
 
@@ -54,7 +56,7 @@ class ProductController
 
             foreach ($selectedSKUs as $selectedSKU) {
                 // Update the product's amount in the database
-                $query = "UPDATE products SET amount = amount - 1 WHERE SKU = '$selectedSKU'";
+                $query = "UPDATE products SET amount = amount - 1 WHERE sku = '$selectedSKU'";
                 $database->query($query);
             }
 

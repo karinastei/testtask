@@ -39,8 +39,6 @@
                 <option value="Furniture">Furniture</option>
             </select><br><br>
 
-            <!-- this could be as text in function in product and the keyword is in brackets -->
-            <!--siia tuleb mingi asi et siia panna input -->
             <div id="dynamicFields"></div>
 
 

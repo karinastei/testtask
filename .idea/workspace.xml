@@ -6,7 +6,14 @@
   <component name="ChangeListManager">
     <list default="true" id="e56c93d6-7056-4925-ad7b-edaa9b316161" name="Changes" comment="almost inserts but can't insert the specific attributes because they aren't defined in the object (revert the functions and objects?)">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/add_product.php" beforeDir="false" afterPath="$PROJECT_DIR$/add_product.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/controller/ProductController.php" beforeDir="false" afterPath="$PROJECT_DIR$/controller/ProductController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/form_change.php" beforeDir="false" afterPath="$PROJECT_DIR$/form_change.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/model/Book.php" beforeDir="false" afterPath="$PROJECT_DIR$/model/Book.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/model/Furniture.php" beforeDir="false" afterPath="$PROJECT_DIR$/model/Furniture.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/model/Product.php" beforeDir="false" afterPath="$PROJECT_DIR$/model/Product.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/save_product.php" beforeDir="false" afterPath="$PROJECT_DIR$/save_product.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -77,7 +84,7 @@
       <workItem from="1700304605055" duration="13978000" />
       <workItem from="1700421217492" duration="6185000" />
       <workItem from="1700480143785" duration="30683000" />
-      <workItem from="1700640969542" duration="5300000" />
+      <workItem from="1700640969542" duration="18870000" />
     </task>
     <task id="LOCAL−00001" summary="Works with local game db">
       <created>1699552044967</created>
@@ -205,7 +212,13 @@
       <option name="presentableId" value="LOCAL−00021" />
       <updated>1700646300873</updated>
     </task>
-    <option name="localTasksCounter" value="22" />
+    <task id="LOCAL−00022" summary="almost inserts but can't insert the specific attributes because they aren't defined in the object (revert the functions and objects?)">
+      <created>1700658955885</created>
+      <option name="number" value="LOCAL−00022" />
+      <option name="presentableId" value="LOCAL−00022" />
+      <updated>1700658955885</updated>
+    </task>
+    <option name="localTasksCounter" value="23" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
