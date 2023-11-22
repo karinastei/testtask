@@ -19,7 +19,7 @@ class ProductController
             $database->connect(); // Connect to the database
 
             // Fetch products from the database
-            $productData = $database->query("SELECT products.*, dvds.size, furniture.height, furniture.width, furniture.length, books.weight FROM products LEFT JOIN dvds ON products.id = dvds.product_id LEFT JOIN furniture ON products.id = furniture.product_id LEFT JOIN books ON products.id = books.product_id;");
+            $productData = $database->query("SELECT products.*, dvd.size, furniture.height, furniture.width, furniture.length, book.weight FROM products LEFT JOIN dvd ON products.id = dvd.product_id LEFT JOIN furniture ON products.id = furniture.product_id LEFT JOIN book ON products.id = book.product_id;");
 
             while ($row = $productData->fetch_assoc()) {
                 $productType = $row['type'];
