@@ -9,6 +9,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $database->connect(); // Connect to the database
 
         // Retrieve form data
+        //???this could be a function?
         $sku = $_POST['sku'];
         $name = $_POST['name'];
         $price = $_POST['price'];
@@ -17,6 +18,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $weight = $_POST['weight'];
 
         // Sanitize inputs (prevent SQL injection)
+        //???this could be a function?
         $sku = $database->connection->real_escape_string($sku);
         $name = $database->connection->real_escape_string($name);
         $price = $database->connection->real_escape_string($price);
@@ -33,6 +35,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             $productId = $database->connection->insert_id;
 
             // Construct and execute the SQL query for books table OR OTHER
+            //table name is gotten by type inserted (+s) and the fields depend on the type so the column names should be taken from the form?
             $queryBooks = "INSERT INTO books (product_id, weight) 
                            VALUES ('$productId', '$weight')";
 
