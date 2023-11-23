@@ -1,8 +1,7 @@
-<!-- add_product.php file -->
 <!DOCTYPE html>
 <html>
 <head>
-    <link rel="stylesheet" type="text/css" href="./style.css">
+    <link rel="stylesheet" type="text/css" href="public/css/style.css">
     <title>Add Product</title>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 </head>
@@ -40,13 +39,9 @@
             </select><br><br>
 
             <div id="dynamicFields"></div>
-
-
     </form>
-
     <div id="notification"></div>
-
-    <script src="product_form.js"></script>
+    <script src="public/js/product_form.js"></script>
 </div>
 </div>
 </body>

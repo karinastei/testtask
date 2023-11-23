@@ -28,9 +28,6 @@ class ProductController
                 $price = $row['price'];
                 $amount = $row['amount'];
 
-                // Create product object using the factory
-                //use these two to create an object with the attributes
-                //then but the object to database !!!!!!
                 $product = ProductFactory::createProduct($type, $sku, $name, $price, $amount);
 
                 $product->getSpecificAttributeFromDB($row); // Fetches the specific property based on the product type
@@ -49,7 +46,16 @@ class ProductController
             echo $e->getMessage();
         }
     }
-    public function updateProductAmounts($selectedSKUs) {
+
+    public function handleFormSubmission() {
+        if (isset($_POST['delete'])) {
+            $selectedSKUs = isset($_POST['selected_products']) ? $_POST['selected_products'] : [];
+            $this->updateProductAmounts($selectedSKUs);
+        }
+    }
+
+    public function updateProductAmounts($selectedSKUs)
+    {
         try {
             $database = new Database();
             $database->connect();
@@ -61,12 +67,10 @@ class ProductController
             }
 
             $database->disconnect();
-            header("Location: ".$_SERVER['PHP_SELF']);
+            header("Location: " . $_SERVER['PHP_SELF']);
             exit();
         } catch (Exception $e) {
             echo $e->getMessage();
         }
-
     }
-
 }

@@ -19,13 +19,11 @@ abstract class Product
         $this->type = $type;
     }
 
-// Getters for SKU, name, and price
     public function getValue($value)
     {
         return $this->{$value};
     }
 
-    //gets the specific attribute value and unit
     public function getSpecificAttribute()
     {
         $attributes = [];
@@ -51,6 +49,7 @@ abstract class Product
         return ucfirst($this->specificAttributes[0]);
     }
 
+    //creates the remaining form based on entered type
     public function getFormValues()
     {
         $form = '';
@@ -63,7 +62,6 @@ abstract class Product
 
     public function saveToDB($database)
     {
-
         $queryProducts = "INSERT INTO products (sku, name, price, amount, type) 
                   VALUES ('{$this->getValue('sku')}', '{$this->getValue('name')}', '{$this->getValue('price')}', '{$this->getValue('amount')}', '{$this->getValue('type')}')";
 
