@@ -4,19 +4,17 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e56c93d6-7056-4925-ad7b-edaa9b316161" name="Changes" comment="dynamic add product">
-      <change afterPath="$PROJECT_DIR$/view/index.php" afterDir="false" />
+    <list default="true" id="e56c93d6-7056-4925-ad7b-edaa9b316161" name="Changes" comment="moved some files">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/add_product.php" beforeDir="false" afterPath="$PROJECT_DIR$/public/add_product.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/add_product.php" beforeDir="false" afterPath="$PROJECT_DIR$/add_product.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/database.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/database.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/controller/ProductController.php" beforeDir="false" afterPath="$PROJECT_DIR$/controller/ProductController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/form_change.php" beforeDir="false" afterPath="$PROJECT_DIR$/form_change.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/model/Furniture.php" beforeDir="false" afterPath="$PROJECT_DIR$/model/Furniture.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/model/Product.php" beforeDir="false" afterPath="$PROJECT_DIR$/model/Product.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/product_form.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/product_form.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/save_product.php" beforeDir="false" afterPath="$PROJECT_DIR$/public/save_product.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/view/product.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/js/product_form.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/product_form.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/save_product.php" beforeDir="false" afterPath="$PROJECT_DIR$/save_product.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/view/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/view/index.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -66,11 +64,11 @@
 }</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\xampp\htdocs\store" />
       <recent name="C:\xampp\htdocs\store\public" />
       <recent name="C:\xampp\htdocs\store\public\js" />
       <recent name="C:\xampp\htdocs\store\public\css" />
       <recent name="C:\xampp\htdocs\store\view" />
-      <recent name="C:\xampp\htdocs\store" />
     </key>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
@@ -91,7 +89,8 @@
       <workItem from="1700304605055" duration="13978000" />
       <workItem from="1700421217492" duration="6185000" />
       <workItem from="1700480143785" duration="30683000" />
-      <workItem from="1700640969542" duration="29190000" />
+      <workItem from="1700640969542" duration="39982000" />
+      <workItem from="1700821921903" duration="6154000" />
     </task>
     <task id="LOCAL−00001" summary="Works with local game db">
       <created>1699552044967</created>
@@ -231,7 +230,13 @@
       <option name="presentableId" value="LOCAL−00023" />
       <updated>1700685881920</updated>
     </task>
-    <option name="localTasksCounter" value="24" />
+    <task id="LOCAL−00024" summary="moved some files">
+      <created>1700742198551</created>
+      <option name="number" value="LOCAL−00024" />
+      <option name="presentableId" value="LOCAL−00024" />
+      <updated>1700742198551</updated>
+    </task>
+    <option name="localTasksCounter" value="25" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -271,6 +276,7 @@
     <MESSAGE value="22.11 morning" />
     <MESSAGE value="almost inserts but can't insert the specific attributes because they aren't defined in the object (revert the functions and objects?)" />
     <MESSAGE value="dynamic add product" />
-    <option name="LAST_COMMIT_MESSAGE" value="dynamic add product" />
+    <MESSAGE value="moved some files" />
+    <option name="LAST_COMMIT_MESSAGE" value="moved some files" />
   </component>
 </project>

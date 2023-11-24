@@ -9,11 +9,11 @@ require_once './model/Furniture.php';
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
     try {
-        $database = new Database(); // Create an instance of the Database class
-        $database->connect(); // Connect to the database
+        $database = new Database();
+        $database->connect();
 
         // Retrieve form data
-        $sku = $_POST['SKU'];
+        $sku = $_POST['sku'];
         $name = $_POST['name'];
         $price = $_POST['price'];
         $amount = $_POST['amount'];

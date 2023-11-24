@@ -1,18 +1,20 @@
-body{
-    color: #d2cfce;
+body {
+    color: #dadada;
     background-color: #0e1513;
     font-size: 125%;
-    font-family: "Lucida Sans";
 }
+
 .container {
     padding-left: 10%;
     padding-right: 10%;
 }
+
 .product-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); /* Adjust as needed */
-    gap: 9%; /* Adjust the gap between products */
-    padding-top: 5%;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    row-gap: 4%;
+    column-gap: 10%;
+    padding-top: 4%;
 }
 
 .product-box {
@@ -25,31 +27,44 @@ body{
 }
 
 .row {
-    padding-top: 5%;
+    padding-top: 4%;
     display: flex;
     justify-content: space-between;
     align-items: center;
     border-bottom: 3px solid #d2cfce;
 }
-.form-body {
-    padding-top: 5%;
-}
+
 .buttons {
+    margin-right: 4%;
     display: flex;
-    gap: 10px;
+    gap: 7%;
 }
-input {
-    margin-left: 3%;
-    align-self: center;
+
+.form-body {
+    margin-top: 5%;
+}
+
+label {
+    display: inline-block;
+    width: 100px;
+    vertical-align: top;
+    margin-bottom: 10px;
+}
+
+.input-field {
+    width: calc(30% - 110px);
+    box-sizing: border-box;
+    margin-bottom: 10px;
+    margin-left: 5%;
 }
 
 button, #delete-product-btn {
+    padding: 5%;
     background-color: #3f5d54;
     color: white;
-    font-size: 125%;
+    font-size: 110%;
     border: none;
 }
-
 
 #delete-product-btn:hover, button:hover {
     background-color: #202d29;

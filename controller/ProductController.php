@@ -47,7 +47,8 @@ class ProductController
         }
     }
 
-    public function handleFormSubmission() {
+    public function handleFormSubmission()
+    {
         if (isset($_POST['delete'])) {
             $selectedSKUs = isset($_POST['selected_products']) ? $_POST['selected_products'] : [];
             $this->updateProductAmounts($selectedSKUs);

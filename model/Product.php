@@ -54,9 +54,10 @@ abstract class Product
     {
         $form = '';
         foreach ($this->specificAttributes as $attribute) {
-            $form .= '<label for="' . $attribute . '">' . ucfirst($attribute) . ' (' . $this->specificUnit . ')</label>';
-            $form .= '<input type="text" id="' . $attribute . '" name="' . $attribute . '" required><br><br>';
+            $form .= '<label for="' . $attribute . '">' . ucfirst($attribute) . '<br>' . '(' . $this->specificUnit . ')</label>';
+            $form .= '<input type="number" step="0.001" id="' . $attribute . '" name="' . $attribute . '" class="input-field" required><br><br>';
         }
+        $form .= '<p>' . 'Please, provide ' . lcfirst($this->getAttributeLabel()) . ' in ' . $this->specificUnit . '.' . '</p>';
         return $form;
     }
 

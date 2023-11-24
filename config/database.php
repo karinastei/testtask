@@ -1,13 +1,16 @@
 <?php
+
 //database.php
-class Database {
+class Database
+{
     private $host = 'localhost';
     private $username = 'root';
     private $password = 'qwerty';
     private $database = 'store';
     public $connection;
 
-    public function connect() {
+    public function connect()
+    {
         $this->connection = new mysqli($this->host, $this->username, $this->password, $this->database);
 
         // Check connection
@@ -16,18 +19,21 @@ class Database {
         }
     }
 
-    public function disconnect() {
+    public function disconnect()
+    {
         if ($this->connection) {
             $this->connection->close();
         }
     }
 
-    public function query($sql) {
+    public function query($sql)
+    {
         $result = $this->connection->query($sql);
         return $result;
     }
 
-    public function fetchAssoc($result) {
+    public function fetchAssoc($result)
+    {
         return $result->fetch_assoc();
     }
 }

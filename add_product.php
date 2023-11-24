@@ -4,12 +4,11 @@
     <link rel="stylesheet" type="text/css" href="public/css/style.css">
     <title>Add Product</title>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-</head>
+    <script src=".//public/js/product_form.js"></script>
 </head>
 <body>
 <div class="container">
-
-    <form id="product_form" method="post" action="save_product.php">
+    <form id="product_form" method="post" action="save_product.php" onsubmit="return validateForm()">
         <div class="row">
             <h1>Product List</h1>
             <div class="buttons">
@@ -17,21 +16,22 @@
                 <button type="button" onclick="cancel()">Cancel</button>
             </div>
         </div>
+        <div id="notification"></div>
         <div class="form-body">
-            <label for="SKU">SKU:</label>
-            <input type="text" id="SKU" name="SKU" required><br><br>
+            <label for="sku">SKU:</label>
+            <input type="text" id="sku" class="input-field" name="sku" required><br><br>
 
             <label for="name">Name:</label>
-            <input type="text" id="name" name="name" required><br><br>
+            <input type="text" id="name" class="input-field" name="name" required><br><br>
 
             <label for="price">Price:</label>
-            <input type="text" id="price" name="price" required><br><br>
+            <input type="number" step="0.001" id="price" class="input-field" name="price" required><br><br>
 
             <label for="amount">Amount:</label>
-            <input type="text" id="amount" name="amount" required><br><br>
+            <input type="number" id="amount" class="input-field" name="amount" required><br><br>
 
-            <label for="productType">Product Type:</label>
-            <select id="productType" name="productType" onchange="toggleFields()" required>
+            <label for="productType">Product type:</label>
+            <select id="productType" name="productType" class="input-field" onchange="toggleFields()" required>
                 <option value="">Select Type</option>
                 <option value="DVD">DVD</option>
                 <option value="Book">Book</option>
@@ -40,7 +40,7 @@
 
             <div id="dynamicFields"></div>
     </form>
-    <div id="notification"></div>
+
     <script src="public/js/product_form.js"></script>
 </div>
 </div>

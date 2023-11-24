@@ -1,5 +1,4 @@
 <?php
-// Include necessary files
 require_once './config/database.php';
 require_once './controller/ProductController.php';
 
