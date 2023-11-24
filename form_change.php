@@ -1,9 +1,8 @@
 <?php
-//form_change.php
 
 include './model/Product.php';
 include_once './model/Book.php';
-include_once './model/DVD.php';
+include_once './model/Dvd.php';
 include_once './model/Furniture.php';
 
 // Retrieve the selected product type sent via POST

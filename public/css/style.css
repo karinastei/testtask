@@ -19,7 +19,7 @@ body {
 
 .product-box {
     border: 1px solid #ccc;
-    padding: 10%;
+    padding: 5%;
 }
 
 .text {
@@ -46,13 +46,13 @@ body {
 
 label {
     display: inline-block;
-    width: 100px;
+    width: 150px;
     vertical-align: top;
     margin-bottom: 10px;
 }
 
 .input-field {
-    width: calc(30% - 110px);
+    width: calc(20% - 110px);
     box-sizing: border-box;
     margin-bottom: 10px;
     margin-left: 5%;

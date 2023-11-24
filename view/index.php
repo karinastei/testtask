@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -24,13 +24,10 @@
                     <input type='checkbox' class='delete-checkbox' name='selected_products[]'
                            value='<?php echo $product->getValue('sku'); ?>'>
                     <div class='text'>
-                        <p>SKU: <?php echo $product->getValue('sku'); ?></p>
-                        <p>Name: <?php echo $product->getValue('name'); ?></p>
-                        <p>Price: <?php echo $product->getValue('price'); ?> $</p>
-                        <p>Type: <?php echo $product->getValue('type'); ?></p>
-                        <p>Amount: <?php echo $product->getValue('amount'); ?></p>
-                        <p><?php echo $product->getAttributeLabel(); ?>
-                            : <?php echo $product->getSpecificAttribute(); ?></p>
+                        <p><?php echo $product->getValue('sku'); ?></p>
+                        <p><?php echo $product->getValue('name'); ?></p>
+                        <p><?php echo $product->getValue('price'); ?> $</p>
+                        <p><?php echo $product->getAttributeLabel(); ?>: <?php echo $product->getSpecificAttribute(); ?></p>
                     </div>
                 </div>
             <?php endforeach; ?>

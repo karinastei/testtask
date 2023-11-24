@@ -1,6 +1,5 @@
 <?php
 
-//database.php
 class Database
 {
     private $host = 'localhost';
@@ -13,7 +12,6 @@ class Database
     {
         $this->connection = new mysqli($this->host, $this->username, $this->password, $this->database);
 
-        // Check connection
         if ($this->connection->connect_error) {
             die("Connection failed: " . $this->connection->connect_error);
         }
@@ -28,8 +26,7 @@ class Database
 
     public function query($sql)
     {
-        $result = $this->connection->query($sql);
-        return $result;
+        return $this->connection->query($sql);
     }
 
     public function fetchAssoc($result)

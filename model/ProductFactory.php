@@ -2,6 +2,9 @@
 
 class ProductFactory
 {
+    /**
+     * @throws Exception
+     */
     public static function createProduct($type, $SKU, $name, $price, $amount)
     {
         $className = ucfirst(strtolower($type));

@@ -54,7 +54,7 @@ abstract class Product
     {
         $form = '';
         foreach ($this->specificAttributes as $attribute) {
-            $form .= '<label for="' . $attribute . '">' . ucfirst($attribute) . '<br>' . '(' . $this->specificUnit . ')</label>';
+            $form .= '<label for="' . $attribute . '">' . ucfirst($attribute) . ' (' . $this->specificUnit . ')</label>';
             $form .= '<input type="number" step="0.001" id="' . $attribute . '" name="' . $attribute . '" class="input-field" required><br><br>';
         }
         $form .= '<p>' . 'Please, provide ' . lcfirst($this->getAttributeLabel()) . ' in ' . $this->specificUnit . '.' . '</p>';
@@ -82,8 +82,8 @@ abstract class Product
             $querySpecificProduct = "INSERT INTO $tableName (product_id, $typeColumnsString) 
                              VALUES ('$productId', $typeValuesString)";
 
-            // Execute the SQL query for the specific product type table
             $database->query($querySpecificProduct);
+
         }
     }
 }

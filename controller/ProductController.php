@@ -1,8 +1,8 @@
 <?php
-// Import necessary model classes and database connection
+
 require_once './model/Product.php';
 require_once './model/Book.php';
-require_once './model/DVD.php';
+require_once './model/Dvd.php';
 require_once './model/Furniture.php';
 require_once './model/ProductFactory.php';
 require_once './config/database.php';
@@ -16,9 +16,8 @@ class ProductController
         try {
             // Create an instance of the Database class
             $database = new Database();
-            $database->connect(); // Connect to the database
+            $database->connect();
 
-            // Fetch products from the database
             $productData = $database->query("SELECT products.*, dvd.size, furniture.height, furniture.width, furniture.length, book.weight FROM products LEFT JOIN dvd ON products.id = dvd.product_id LEFT JOIN furniture ON products.id = furniture.product_id LEFT JOIN book ON products.id = book.product_id;");
 
             while ($row = $productData->fetch_assoc()) {
@@ -38,13 +37,14 @@ class ProductController
                 }
             }
 
-            $database->disconnect(); // Disconnect from the database
+            $database->disconnect();
 
-            // Return the products array
             return $products;
         } catch (Exception $e) {
             echo $e->getMessage();
         }
+
+        return $products;
     }
 
     public function handleFormSubmission()
@@ -62,7 +62,6 @@ class ProductController
             $database->connect();
 
             foreach ($selectedSKUs as $selectedSKU) {
-                // Update the product's amount in the database
                 $query = "UPDATE products SET amount = amount - 1 WHERE sku = '$selectedSKU'";
                 $database->query($query);
             }

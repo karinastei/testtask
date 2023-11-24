@@ -4,13 +4,17 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e56c93d6-7056-4925-ad7b-edaa9b316161" name="Changes" comment="moved some files">
+    <list default="true" id="e56c93d6-7056-4925-ad7b-edaa9b316161" name="Changes" comment="works">
+      <change beforePath="$PROJECT_DIR$/.idea/store.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/store.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/add_product.php" beforeDir="false" afterPath="$PROJECT_DIR$/add_product.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/config/database.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/database.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/controller/ProductController.php" beforeDir="false" afterPath="$PROJECT_DIR$/controller/ProductController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/form_change.php" beforeDir="false" afterPath="$PROJECT_DIR$/form_change.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/model/DVD.php" beforeDir="false" afterPath="$PROJECT_DIR$/model/Dvd.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/model/Product.php" beforeDir="false" afterPath="$PROJECT_DIR$/model/Product.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/model/ProductFactory.php" beforeDir="false" afterPath="$PROJECT_DIR$/model/ProductFactory.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/style.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/js/product_form.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/product_form.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/save_product.php" beforeDir="false" afterPath="$PROJECT_DIR$/save_product.php" afterDir="false" />
@@ -90,7 +94,7 @@
       <workItem from="1700421217492" duration="6185000" />
       <workItem from="1700480143785" duration="30683000" />
       <workItem from="1700640969542" duration="39982000" />
-      <workItem from="1700821921903" duration="6154000" />
+      <workItem from="1700821921903" duration="14695000" />
     </task>
     <task id="LOCAL−00001" summary="Works with local game db">
       <created>1699552044967</created>
@@ -236,7 +240,13 @@
       <option name="presentableId" value="LOCAL−00024" />
       <updated>1700742198551</updated>
     </task>
-    <option name="localTasksCounter" value="25" />
+    <task id="LOCAL−00025" summary="works">
+      <created>1700846161624</created>
+      <option name="number" value="LOCAL−00025" />
+      <option name="presentableId" value="LOCAL−00025" />
+      <updated>1700846161624</updated>
+    </task>
+    <option name="localTasksCounter" value="26" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -265,7 +275,6 @@
     <MESSAGE value="separate files for product classes" />
     <MESSAGE value="separate css file" />
     <MESSAGE value="more files more fun" />
-    <MESSAGE value="works" />
     <MESSAGE value="mass delete (works?)" />
     <MESSAGE value="very basic add product page" />
     <MESSAGE value="inserts book into products table only" />
@@ -277,6 +286,7 @@
     <MESSAGE value="almost inserts but can't insert the specific attributes because they aren't defined in the object (revert the functions and objects?)" />
     <MESSAGE value="dynamic add product" />
     <MESSAGE value="moved some files" />
-    <option name="LAST_COMMIT_MESSAGE" value="moved some files" />
+    <MESSAGE value="works" />
+    <option name="LAST_COMMIT_MESSAGE" value="works" />
   </component>
 </project>
