@@ -18,7 +18,7 @@ class ProductController
             $database = new Database();
             $database->connect();
 
-            $productData = $database->query("SELECT products.*, dvd.size, furniture.height, furniture.width, furniture.length, book.weight FROM products LEFT JOIN dvd ON products.id = dvd.product_id LEFT JOIN furniture ON products.id = furniture.product_id LEFT JOIN book ON products.id = book.product_id;");
+            $productData = $database->query("SELECT products.*, dvd.size, furniture.height, furniture.width, furniture.length, book.weight FROM products LEFT JOIN dvd ON products.id = dvd.product_id LEFT JOIN furniture ON products.id = furniture.product_id LEFT JOIN book ON products.id = book.product_id ORDER BY products.id DESC;");
 
             while ($row = $productData->fetch_assoc()) {
                 $type = $row['type'];
