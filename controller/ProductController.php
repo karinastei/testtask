@@ -51,23 +51,23 @@ class ProductController
     {
         if (isset($_POST['delete'])) {
             $selectedSKUs = isset($_POST['selected_products']) ? $_POST['selected_products'] : [];
-            $this->updateProductAmounts($selectedSKUs);
+            $this->deleteProducts($selectedSKUs);
         }
     }
 
-    public function updateProductAmounts($selectedSKUs)
+    public function deleteProducts($selectedSKUs)
     {
         try {
             $database = new Database();
             $database->connect();
 
             foreach ($selectedSKUs as $selectedSKU) {
-                $query = "UPDATE products SET amount = amount - 1 WHERE sku = '$selectedSKU'";
-                $database->query($query);
+                $productDeleteQuery = "DELETE FROM products WHERE sku = '$selectedSKU'";
+                $database->query($productDeleteQuery);
             }
 
             $database->disconnect();
-            header("Location: " . $_SERVER['PHP_SELF']);
+            header("Location: /");
             exit();
         } catch (Exception $e) {
             echo $e->getMessage();

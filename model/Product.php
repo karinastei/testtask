@@ -71,7 +71,7 @@ abstract class Product
             $productId = $database->connection->insert_id;
 
             $attributes = get_object_vars($this);
-            $tableName = $this->getValue('type');
+            $tableName = strtolower($this->getValue('type'));
             // Exclude common fields for the query
             $removedFields = ['sku', 'name', 'price', 'amount', 'type', 'specificAttributes', 'specificUnit'];
             $specificFields = array_diff_key($attributes, array_flip($removedFields));

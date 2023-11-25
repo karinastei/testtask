@@ -12,7 +12,7 @@ body {
 .product-grid {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-    row-gap: 4%;
+    row-gap: 50px;
     column-gap: 10%;
     padding-top: 4%;
 }

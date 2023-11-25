@@ -14,8 +14,8 @@
         <div class="row">
             <h1>Product List</h1>
             <div class="buttons">
-                <button type="button" onclick="redirectToForm()">Add</button>
-                <input type='submit' id='delete-product-btn' name='delete' value='Mass delete'>
+                <button type="button" onclick="redirectToForm()">ADD</button>
+                <input type='submit' id='delete-product-btn' name='delete' value='MASS DELETE'>
             </div>
         </div>
         <div class='product-grid'>

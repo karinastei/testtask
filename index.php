@@ -7,7 +7,7 @@ $productController = new ProductController();
 // Handle form submissions
 if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['delete'])) {
     $selectedSKUs = isset($_POST['selected_products']) ? $_POST['selected_products'] : [];
-    $productController->updateProductAmounts($selectedSKUs);
+    $productController->deleteProducts($selectedSKUs);
 }
 
 // Retrieve products from the controller

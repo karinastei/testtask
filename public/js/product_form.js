@@ -1,5 +1,5 @@
 function cancel() {
-    window.location.href = "/store";
+    window.location.href = "/";
 }
 
 function redirectToForm() {
@@ -29,9 +29,8 @@ $(document).ready(function () {
             url: $(this).attr('action'),
             data: $(this).serialize(),
             success: function (response) {
-                // Check the response from the server
                 if (response.trim() === 'success') {
-                    window.location.href = 'index.php';
+                    window.location.href = '/';
                 } else {
                     $('#notification').html(response);
                 }
@@ -42,5 +41,3 @@ $(document).ready(function () {
         });
     });
 });
-
-

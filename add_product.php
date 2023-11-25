@@ -28,7 +28,7 @@
             <input type="number" step="0.001" id="price" class="input-field" name="price" required><br><br>
 
             <label for="amount">Amount</label>
-            <input type="number" id="amount" class="input-field" name="amount" required><br><br>
+            <input type="number" id="amount" class="input-field" name="amount" value="1"><br><br>
 
             <label for="productType">Type Switcher</label>
             <select id="productType" name="productType" class="input-field" onchange="toggleFields()" required>
@@ -39,6 +39,7 @@
             </select><br><br>
 
             <div id="dynamicFields"></div>
+        </div>
     </form>
 
 </div>
